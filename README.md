@@ -1,16 +1,63 @@
 # advance_flutter_ch3
+##  3.1 connectivity_plus
 
-A new Flutter project.
+### Explanation
+- **Import the package**: First, import the `connectivity_plus` package.
+- **StreamBuilder**: Use a `StreamBuilder` to listen for changes in the connectivity status provided by `Connectivity().onConnectivityChanged`.
+- **Builder Function**: The `builder` function checks the connectivity status:
+  - If `snapshot.data` contains `ConnectivityResult.mobile` or `ConnectivityResult.wifi`, it means the device is connected to the internet, and the `OnlineContent` widget is returned.
+  - If the device is not connected, the `OfflineContent` widget is returned.
+- **OnlineContent and OfflineContent Widgets**: These are simple widgets that display a message based on the connectivity status.
 
-## Getting Started
+This setup ensures that the UI updates dynamically based on the network connectivity status of the device.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+```dart
+import 'package:flutter/material.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+void main() {
+  runApp(MyApp());
+}
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Connectivity Network'),
+        ),
+        body: StreamBuilder(
+          stream: Connectivity().onConnectivityChanged,
+          builder: (context, snapshot) {
+              if (snapshot.data!.contains(ConnectivityResult.mobile)) {
+                // RETURN MOBILE DATA
+                return Text('connection of mobile');
+              } else if (snapshot.data!.contains(ConnectivityResult.wifi)) {
+                // RETURN WIFI
+                return Text('connection of wifi');
+              } else {  
+                // RETURN NO INTERNET CONNECTION
+                return Text('no internet connection');
+              }
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+### Screenshots
+
+<div align="center">
+  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/030f238f-5807-4230-a8bf-541c0ba18a5f"  width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/118337cc-6448-4eba-84f2-c8d4df4c39ec" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src= "" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+### Video 
+

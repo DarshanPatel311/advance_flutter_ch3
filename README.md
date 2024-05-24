@@ -59,12 +59,73 @@ class MyApp extends StatelessWidget {
   <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/118337cc-6448-4eba-84f2-c8d4df4c39ec" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
   <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/f24641bc-06c3-47fe-a661-b060821d73b3" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
 </div>
+<div align="center">
+  <a href='https://github.com/DarshanPatel311/advance_flutter_ch3/tree/master/lib/3_1_connectivity/view'>👉 📱 Go to dart file 📱 👈</a>
+</div>
 
 ### Video 
 
 
 
 https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/cf6d9724-dab1-46e3-827f-fd5671d025f2
+
+## 3.2 Chrome : flutter_inappwebview Package 
+
+# flutter_inappwebview
+
+`flutter_inappwebview` is a Flutter package that allows you to embed WebView widgets into your Flutter application with ease. It provides a comprehensive set of features and functionalities, enabling you to control web content dynamically.
+
+## Installation
+
+Run `flutter pub get` to install the package.
+
+## Usage
+
+Here's a simple example demonstrating how to use `InAppWebView` and control it using its methods: `goBack`, `goForward`, `reload`, and `loadUrl`.
+
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Connectivity Network'),
+        ),
+        body:InAppWebView(
+        initialUrlRequest: URLRequest(url: Uri.parse("https://flutter.dev")),
+        onWebViewCreated: (controller) {
+          _webViewController = controller;
+        },
+      ),
+    );
+  }
+}
+```
+
+### Screenshots
+
+<div align="center">
+  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/4846201c-ef5d-4bb0-872a-37c30d2cf903" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/7ac9cd82-08e3-4bd8-9764-b8b2410b879e" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<div align="center">
+  <a href='https://github.com/DarshanPatel311/advance_flutter_ch3/tree/master/lib/3_2_chrome'>👉 📱 Go to dart file 📱 👈</a>
+</div>
+
+### Video 
+
+
+https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/a54ec0ca-c177-4bc0-8764-8c8940794f1e
 
 
 

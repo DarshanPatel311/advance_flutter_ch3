@@ -12,58 +12,64 @@ class  ConnectivityScreen extends StatelessWidget {
         body: StreamBuilder(
           builder:  (context, snapshot){
             if(snapshot.data!.contains(ConnectivityResult.mobile)){
-              return Column(
-                children: [
-                  Container(
-                    height: 500,
-                    width: double.infinity,
-                    child: Image.asset('assets/img/Screenshot 2024-05-22 201741.png'),
-                  )
-
-                ],
-              );
-            }else if(snapshot.data!.contains(ConnectivityResult.wifi)){
-              return Column(
-                children: [
-                  Container(
-                    height: 500,
-                    width: double.infinity,
-                    child: Image.asset('assets/img/Screenshot 2024-05-22 201741.png'),
-                  ),
-
-                ],
-              );
-            }
-            else{
               return Scaffold(
-                appBar: AppBar(
-                  title: Text("Home Screen"),
-                ),
                 body: Column(
                   children: [
-                    Spacer(),
+                    SizedBox(height: 120,),
                     Container(
-                      height: 50,
-                      width: 450,
-                      color: Colors.grey,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Icon(Icons.home_outlined,size: 30,),
-                
-                          Icon(Icons.add,size: 30,),
-                          
-                          Icon(Icons.settings_suggest_outlined,size: 30,),
-                          Icon(Icons.video_call_outlined)
-                        ],
-                      ),
-                    )
-                
-                
-                
+                      height: 500,
+                      width: double.infinity,
+                      child: Image.asset('assets/img/mobile data.jpg'),
+                    ),
+                    Text("Your Device Connected to Network",style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff006E7A)
+                    ),)
+
                   ],
                 ),
               );
+            }else if(snapshot.data!.contains(ConnectivityResult.wifi)){
+              return Scaffold(
+                backgroundColor: Color(0xffEBEBEB),
+
+                body: Column(
+                  children: [
+                    SizedBox(height: 120,),
+                    Container(
+                      height: 500,
+                      width: double.infinity,
+                      child: Image.asset('assets/img/wifi.jpg'),
+                    ),
+                    Text("Your Device Connected to wifi",style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff518ED9)
+                    ),)
+
+                  ],
+                ),
+              );
+            }
+            else{
+              return Column(
+                children: [
+                  SizedBox(height: 120,),
+                  Container(
+                    height: 500,
+                    width: double.infinity,
+                    child: Image.asset('assets/img/internetno.avif'),
+                  ),
+                  Text("Please check your internet connection",style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.amber
+                  ),)
+
+                ],
+              );
+
             }
           },
           stream: Connectivity().onConnectivityChanged,

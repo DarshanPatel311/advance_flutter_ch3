@@ -36,7 +36,7 @@ class Googlepage extends StatelessWidget {
                             inAppWebViewController.loadUrl(
                                 urlRequest: URLRequest(
                                     url: WebUri(
-                                        'https://www.google.com/search?q=google&rlz=1C1CHBF_enIN1097IN1097&oq=${Provider.of<GoogleProvider>(context, listen: false).search}&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDIGCAIQRRg7MgwIAxAjGCcYgAQYigUyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyCggGEAAYsQMYgAQyDQgHEAAYgwEYsQMYgAQyBwgIEAAYjwIyBwgJEAAYjwLSAQk3NTQ4ajFqMTWoAgiwAgE&sourceid=chrome&ie=UTF-8')));
+                                        'https://www.google.com/search?q=${Provider.of<GoogleProvider>(context, listen: false).search}&sca_esv=680b12c94771f77f&sca_upv=1&sxsrf=ADLYWIL7yMbHTwni04YbecJFVZ7z8KBb-Q%3A1716530603795&source=hp&ei=qy1QZv6-Lbux0-kPmLuOmAc&iflsig=AL9hbdgAAAAAZlA7u_40g8VdlYlIob8vNwe2yXXNXUIj&oq=&gs_lp=Egdnd3Mtd2l6IgAqAggAMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCSLwRUABYAHABeACQAQCYAQCgAQCqAQC4AQHIAQCYAgGgAgyoAgqYAwySBwExoAcA&sclient=gws-wiz')));
                           },
                         ),
                         contentPadding: EdgeInsets.symmetric(horizontal: 20),
@@ -73,8 +73,7 @@ class Googlepage extends StatelessWidget {
         children: [
           InAppWebView(
               initialUrlRequest: URLRequest(
-                  url: WebUri(
-                      'https://www.google.com/search?q=google&rlz=1C1CHBF_enIN1097IN1097&oq=${Provider.of<GoogleProvider>(context, listen: false).search}&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDIGCAIQRRg7MgwIAxAjGCcYgAQYigUyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyCggGEAAYsQMYgAQyDQgHEAAYgwEYsQMYgAQyBwgIEAAYjwIyBwgJEAAYjwLSAQk3NTQ4ajFqMTWoAgiwAgE&sourceid=chrome&ie=UTF-8')),
+                  url: WebUri('https://www.google.com/search?q=${Provider.of<GoogleProvider>(context, listen: false).search}&sca_esv=680b12c94771f77f&sca_upv=1&sxsrf=ADLYWIL7yMbHTwni04YbecJFVZ7z8KBb-Q%3A1716530603795&source=hp&ei=qy1QZv6-Lbux0-kPmLuOmAc&iflsig=AL9hbdgAAAAAZlA7u_40g8VdlYlIob8vNwe2yXXNXUIj&oq=&gs_lp=Egdnd3Mtd2l6IgAqAggAMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCSLwRUABYAHABeACQAQCYAQCgAQCqAQC4AQHIAQCYAgGgAgyoAgqYAwySBwExoAcA&sclient=gws-wiz')),
               onWebViewCreated: (controller) {
                 inAppWebViewController = controller;
               },

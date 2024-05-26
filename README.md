@@ -114,8 +114,8 @@ class MyApp extends StatelessWidget {
 ### Screenshots
 
 <div align="center">
-  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/4846201c-ef5d-4bb0-872a-37c30d2cf903" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/7ac9cd82-08e3-4bd8-9764-b8b2410b879e" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/7ac9cd82-08e3-4bd8-9764-b8b2410b879e" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src= "https://github.com/DarshanPatel311/advance_flutter_ch3/assets/143177575/4846201c-ef5d-4bb0-872a-37c30d2cf903" width = 240> &nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 <div align="center">
